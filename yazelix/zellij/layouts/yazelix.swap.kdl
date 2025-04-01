@@ -1,0 +1,35 @@
+swap_tiled_layout name="one_pane" {
+    ui exact_panes=4 {
+        pane split_direction="vertical" {
+            pane name="sidebar" {
+                command "env"
+                args "YAZI_CONFIG_HOME=~/.config/yazelix/yazi" "yazi"
+                size "15%"
+            }
+            pane
+        }
+    }
+}
+
+swap_tiled_layout name="sidebar_helix_and_term" {
+    ui min_panes=5 {
+        pane split_direction="vertical" {
+            pane name="sidebar" {
+                command "env"
+                args "YAZI_CONFIG_HOME=~/.config/yazelix/yazi" "yazi"
+                size "15%"
+            }
+            pane split_direction="horizontal" {
+                pane name="helix" {
+                    size "70%"
+                    pane
+                }
+                pane name="zsh" {
+                    command "/opt/homebrew/bin/nu"
+                    args "~/.config/yazelix/nushell/open_terminal.nu"
+                    size "30%"
+                }
+            }
+        }
+    }
+}

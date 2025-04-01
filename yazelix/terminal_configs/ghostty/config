@@ -1,0 +1,22 @@
+#### Command Config ####
+command = "/opt/homebrew/bin/nu -c 'zellij --debug --config-dir ~/.config/yazelix/zellij attach --create yazelix_ghostty options --default-layout yazelix'"
+
+#### Theme Configs ####
+theme = "catppuccin-mocha"
+background-opacity = 0.9
+background-blur = "true"
+
+#### Window Configs ####
+window-decoration = "true"
+window-padding-y = 10,0
+window-height = 60
+window-width = 240
+
+#### Font Configs ####
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+
+#### General Configs ####
+macos-option-as-alt = "true"
+keybind = alt+left=unbind
+keybind = alt+right=unbind

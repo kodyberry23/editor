@@ -1,0 +1,19 @@
+# yazi.toml
+
+[manager]
+ratio = [2, 2, 5]
+
+[opener]
+edit = [
+  { run = '/opt/homebrew/bin/nu ~/.config/yazelix/nushell/open_file.nu "$1"', desc = "Open File in a new pane" },
+]
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
